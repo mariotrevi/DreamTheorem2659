@@ -1822,12 +1822,3 @@ theorem final_result_2659_complete (N : ℕ) [Fact (Nat.Prime N)] (hN : N ≠ 26
 /-
 The Dream Theorem for q=2659 (exact match).
 -/
-theorem final_result_2659_proof (N : ℕ) [Fact (Nat.Prime N)] (hN : N ≠ 2659) (hN_odd : N % 2 = 1) (hN_a : Nat.Coprime 103 N)
-  (P : Ideal Ok2659) [P.IsMaximal] (hP : P.LiesOver (Ideal.span {(N : ℤ)})) :
-  let alpha_bar := Ideal.Quotient.mk P alpha_int_2659
-  let beta_bar := Ideal.Quotient.mk P beta_int_2659
-  let gamma_bar := Ideal.Quotient.mk P gamma_int_2659
-  (c_2659 N = s1_2659 → alpha_bar ^ N = gamma_bar) ∧
-  (c_2659 N = s2_2659 → alpha_bar ^ N = beta_bar) := by
-  constructor
-  · apply final_result_2659_case1 N hN hN_odd hN_a P hP
