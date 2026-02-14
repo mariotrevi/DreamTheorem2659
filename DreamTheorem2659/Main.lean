@@ -71,6 +71,9 @@ Finally, it derives the explicit Frobenius action on the reduction of alpha modu
 import Mathlib
 
 set_option linter.mathlibStandardSet false
+set_option linter.unusedSimpArgs false
+set_option linter.unusedVariables false
+set_option linter.unusedTactic false
 
 open scoped BigOperators
 open scoped Real
